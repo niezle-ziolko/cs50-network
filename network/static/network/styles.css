@@ -1,0 +1,729 @@
+@font-face {
+    font-family: 'TwitterChirp';
+    src: url('/static/network/chirp-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    display: swap;
+}
+
+@font-face {
+    font-family: 'TwitterChirp';
+    src: url('/static/network/chirp-medium.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    display: swap;
+}
+
+@font-face {
+    font-family: 'TwitterChirp';
+    src: url('/static/network/chirp-bold.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    display: swap;
+}
+
+@font-face {
+    font-family: 'TwitterChirpExtendedHeavy';
+    src: url('/static/network/chirp-extended-heavy.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    display: swap;
+}
+
+body {
+    margin-top: 0;
+    display: flex;
+    margin-bottom: 0;
+    color: #e7e9ea;
+    justify-content: center;
+    background-color: #000;
+    font-family: 'TwitterChirp';
+}
+
+header {
+    width: 275px;
+    border-right: 1px solid #2f3336;
+}
+
+footer {
+    width: 275px;
+    border-left: 1px solid #2f3336;
+}
+
+h2 {
+    font-size: 31px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 5em;
+    padding: 10px;
+    font-size: 16px;
+    max-height: 15em;
+    resize: vertical;
+    color: #e7e9ea;
+    border-radius: 4px;
+    width: fill-available;
+    background-color: #000;
+    font-family: 'TwitterChirp';
+    border: 1px solid #2f3336;
+    width: -webkit-fill-available;
+    font-weight: normal !important;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+hr {
+    width: 130px;
+    border: 1px solid #2f3336;
+}
+
+#nav-icon {
+    font-size: 20px;
+    color: #e7e9ea;
+}
+
+a.nav-link {
+    font-size: 20px;
+    color: #e7e9ea;
+    text-decoration: none;
+}
+
+a.card-title {
+    margin: 0;
+    font-size: 14px;
+    color: #e7e9ea;
+    text-decoration: none;
+}
+
+a.card-title:hover {
+    text-decoration: underline;
+}
+
+a.page-link {
+    color: #1d9bf0;
+}
+
+a.page-link.disabled {
+    cursor: default;
+    color: #e7e9ea;
+    text-decoration: none;
+}
+
+.sticky {
+    position: fixed;
+    margin-top: 5px;
+}
+
+.nav-item {
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.logo {
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.nav-item:hover, .logo:hover, .button-edit-profile:hover {
+    width: fit-content;
+    transition: all 0.2s;
+    background-color: #eff3f41a;
+}
+
+.nav-text {
+    margin-left: 20px;
+    margin-right: 16px;
+}
+
+.nav-button {
+    width: 185px;
+    color: #000;
+    font-weight: 600;
+    padding: 15px 25px;
+    text-align: center;
+    border-radius: 25px;
+    text-decoration: none;
+    background-color: #e7e9ea;
+    border: 1px solid #e7e9ea;
+}
+
+.nav-button:hover, .button-post:hover, .button-follow:hover, .button-login:hover {
+    transition: all 0.2s;
+    background-color: #d7dbdc;
+}
+
+.nav-item.button {
+    width: auto;
+    border-radius: 25px;
+    background-color: transparent;
+}
+
+.body {
+    max-width: 750px;
+    min-width: 750px;
+}
+
+.post {
+    padding: 16px;
+    border-bottom: 1px solid #2f3336;
+}
+
+.card-info {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.card-subtitle {
+    margin: 0;
+    color: #71767b;
+    font-weight: normal;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15px;
+}
+
+#image-preview {
+    width: 300px;
+    min-width: 300px;
+    max-width: 330px;
+    margin-top: 15px;
+}
+
+#check {
+    color: #1d9bf0;
+    font-size: 14px;
+}
+
+#heart {
+    color: #c94c4c;
+}
+
+#foo {
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    color: #c94c4c;
+    background-color: transparent;
+}
+
+#foo-like {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: #c94c4c;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+#number {
+    font-weight: bold;
+}
+
+.button-edit {
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    color: #1d9bf0;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.button-delete {
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    color: #f4212e;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.pagination {
+    gap: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-item {
+    display: block;
+}
+
+.profile {
+    padding: 15px;
+    border-bottom: 1px solid #2f3336;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-picture.container {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-picture {
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+    border-radius: 65px;
+}
+
+.profile-picture.preview {
+    margin: 0;
+    width: 115px;
+    height: 115px;
+}
+
+.profile-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+p.follow-number {
+    font-weight: 600;
+    margin-right: 3px;
+    margin-bottom: .5em;
+}
+
+p.text-profile {
+    color: #71767b;
+    margin-right: 15px;
+    margin-bottom: .5em;
+    font-weight: normal;
+}
+
+span.everywhere {
+    font-size: 14px;
+    color: #71767b;
+}
+
+.profile-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-follow {
+    height: 20px;
+    color: #000;
+    display: flex;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 20px 30px;
+    align-items: center;
+    border-radius: 25px;
+    font-family: 'TwitterChirp';  
+    background-color: #e7e9ea;
+    border: 1px solid #e7e9ea;
+}
+
+.button-following {
+    height: 20px;
+    color: #e7e9ea;
+    display: flex;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 20px 30px;
+    align-items: center;
+    border-radius: 25px;
+    font-family: 'TwitterChirp';
+    border: 1px solid #e7e9ea;
+    background-color: transparent;
+}
+
+.button-unfollow {
+    height: 20px;
+    display: flex;
+    cursor: pointer;
+    color: #f4212e;
+    font-weight: bold;
+    padding: 20px 30px;
+    align-items: center;
+    border-radius: 25px;
+    font-family: 'TwitterChirp';
+    border: 1px solid #67070f;
+    background-color: #f4212e1a;
+}
+
+.button-edit-profile {
+    height: 20px;
+    display: flex;
+    cursor: pointer;
+    color: #e7e9ea;
+    font-weight: bold;
+    padding: 20px 30px;
+    align-items: center;
+    border-radius: 25px;
+    font-family: 'TwitterChirp';
+    border: 1px solid #e7e9ea;
+    background-color: transparent;
+}
+
+.modal {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    overflow: auto;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(91, 112, 131, 0.4);
+}
+
+.modal-content {
+    padding: 20px;
+    min-width: 620px;
+    text-align: left;
+    max-width: 710px;
+    border-radius: 8px;
+    background-color: #000;
+}
+
+.popup-interface {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.popup-form {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+#close-popup {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+}
+
+#close-popup:hover {
+    border-radius: 25px;
+    transition: all 0.2s;
+    background-color: #eff3f41a;
+}
+
+.popup-button-box {
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.button.emoji, .button.image {
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #1d9bf0;
+    background-color: transparent;
+}
+
+.emoji-picker__wrapper {
+    z-index: 1000;
+}
+
+.button-post {
+    color: #000;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid #e7e9ea;
+    background-color: #e7e9ea;
+}
+
+.login {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.container-image {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-login {
+    width: 45%;
+    display: grid;
+    align-items: center;
+    justify-content: start;
+}
+
+.title {
+    font-size: 64px;
+    margin-top: 48px;
+    line-height: 84px;
+    margin-bottom: 48px;
+    font-family: 'TwitterChirpExtendedHeavy';
+}
+
+.subtitle {
+    margin-top: 0;
+    font-size: 31px;
+    line-height: 36px;
+    margin-bottom: 32px;
+    font-family: 'TwitterChirpExtendedHeavy';
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    color: #e7e9ea;
+    font-weight: bold;
+    border-radius: 3px;
+    width: fill-available;
+    background-color: #000;
+    font-family: 'TwitterChirp';
+    border: 1px solid #333639;
+    width: -webkit-fill-available;
+}
+
+.form-control.front {
+    font-size: 17px;
+    padding-top: 25px;
+}
+
+.form-control.front:focus {
+    padding-top: 21px;
+    border: 3px solid #1d9bf0;
+}
+
+.button-login {
+    width: 100%;
+    padding: 13px;
+    color: #000;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 45px;
+    border-radius: 25px;
+    border: 1px solid #e7e9ea;
+    background-color: #e7e9ea;
+}
+
+.button-container {
+    width: 300px;
+    display: grid;
+}
+
+a.button-social {
+    width: 300px;
+    height: 40px;
+    display: flex;
+    color: #0f1419;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+    align-items: center;
+    border-radius: 25px;
+    text-decoration: none;
+    border-color: #333639;
+    justify-content: center;
+    font-family: 'TwitterChirp';
+    background-color: #ffffff;
+}
+
+a.button-social:hover {
+    transition: all 0.3s;
+    background-color: #e6e6e6;
+}
+
+span.social-text {
+    font-size: 15px;
+    margin-left: 4px;
+}
+
+.login-space {
+    display: flex;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+button.button-register {
+    width: 300px;
+    height: 40px;
+    color: #fff;
+    display: flex;
+    margin-top: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+    align-items: center;
+    border-radius: 25px;
+    text-decoration: none;
+    justify-content: center;
+    font-family: 'TwitterChirp';
+    background-color: #1d9bf0;
+    border: 1px solid transparent;
+}
+
+button.button-register:hover {
+    transition: all 0.3s;
+    background-color: #1a8cd8;
+}
+
+.button-login.front {
+    width: 300px;
+    height: 40px;
+    display: flex;
+    margin-top: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #1d9bf0;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 8px;
+    align-items: center;
+    border-radius: 25px;
+    text-decoration: none;
+    justify-content: center;
+    font-family: 'TwitterChirp';
+    border: 1px solid #e7e9ea;
+    background-color: transparent;
+}
+
+.button-login.front:hover {
+    transition: all 0.3s;
+    background-color: #1d9bf01a;
+}
+
+.login-label {
+    top: 37px;
+    left: 10px;
+    height: 0px;
+    margin: 0px;
+    cursor: text;
+    font-size: 17px;
+    color: #8f8f8f;
+    text-align: left;
+    position: relative;
+    font-weight: normal;
+    transition: all 0.3s;
+}
+
+.login-label.active {
+    top: 25px;
+    font-size: 13px;
+    color: #1d9bf0;
+    transition: all 0.3s;
+}
+
+.error {
+    color: #f4212e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-icon {
+    width: 45px;
+    margin: 35px;
+    height: 45px;
+    display: flex;
+    opacity: 0.65;
+    cursor: pointer;
+    position: absolute;
+    align-items: center;
+    border-radius: 25px;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    background-color: #0f141ebf;
+}
+
+.upload-icon:hover {
+    transition: all 0.2s;
+    background-color: #272C30BF;
+}
+
+.github-box {
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: fixed;
+}
+
+.github-box div, .github-box div a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.github-box div {
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    justify-content: flex-end;
+    transform: rotate(-45deg);
+}
+
+.github-box:after {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    border-top: 200px solid transparent;
+    border-left: 200px solid transparent;
+    border-bottom: 200px solid #343535;
+}
+
+.github-box div a {
+    color: #fff;
+    font-size: 16px;
+    margin: 0 0 -12.8px;
+    text-decoration: none;
+    font-family: monospace;
+    padding: 3px 25px 25px 25px;
+    -webkit-text-decoration: none;
+    transition: color .15s cubic-bezier(1,-.115,.975,.855);
+}
+
+.github-box div a:focus, .github-box div a:hover {
+    color: #a6a6a6;
+}
+
+.github-icon {
+    width: 35px;
+    height: 35px;
+    fill: currentColor;
+}
