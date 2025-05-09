@@ -123,20 +123,20 @@ cs50-network/
 
 To run the app locally:
 
-# Install dependencies
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-# Database setup
+### Database setup
 
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-# Start development server
+### Start development server
 
 ```bash
 python manage.py runserver
